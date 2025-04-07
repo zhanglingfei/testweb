@@ -20,8 +20,58 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleBtn.addEventListener('click', function() {
             const isExpanded = card.classList.toggle('expanded');
             toggleBtn.textContent = isExpanded ? 'Read Less' : 'Read More';
-        });
-    });
+        
+// Log visit with IP and timestamp to LogSnag
+fetch('https://api.ipify.org?format=json')
+  .then(res => res.json())
+  .then(data => {
+    const ip = data.ip;
+    fetch('https://api.logsnag.com/v1/log', {
+      method: 'POST',
+      headers: {
+        'Authorization': '4e77ff09957c825a9e7e9c444e8e0833',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        project: 'axionintelligence',
+        channel: 'visits',
+        event: 'Page Visit',
+        description: `New visitor from ${ip}`,
+        icon: '👁',
+        notify: false
+      })
+    }).then(() => console.log("Visit logged to LogSnag"))
+      .catch(err => console.error("LogSnag error:", err));
+  })
+  .catch(err => console.error("IP fetch error:", err));
+
+});
+    
+// Log visit with IP and timestamp to LogSnag
+fetch('https://api.ipify.org?format=json')
+  .then(res => res.json())
+  .then(data => {
+    const ip = data.ip;
+    fetch('https://api.logsnag.com/v1/log', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer YOUR_API_TOKEN',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        project: 'your-project',
+        channel: 'visits',
+        event: 'Page Visit',
+        description: `New visitor from ${ip}`,
+        icon: '👁',
+        notify: false
+      })
+    }).then(() => console.log("Visit logged to LogSnag"))
+      .catch(err => console.error("LogSnag error:", err));
+  })
+  .catch(err => console.error("IP fetch error:", err));
+
+});
     
     // Optional: Add smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -35,10 +85,85 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.scrollTo({
                     top: targetElement.offsetTop - 80, // Adjust for header height
                     behavior: 'smooth'
-                });
+                
+// Log visit with IP and timestamp to LogSnag
+fetch('https://api.ipify.org?format=json')
+  .then(res => res.json())
+  .then(data => {
+    const ip = data.ip;
+    fetch('https://api.logsnag.com/v1/log', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer YOUR_API_TOKEN',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        project: 'your-project',
+        channel: 'visits',
+        event: 'Page Visit',
+        description: `New visitor from ${ip}`,
+        icon: '👁',
+        notify: false
+      })
+    }).then(() => console.log("Visit logged to LogSnag"))
+      .catch(err => console.error("LogSnag error:", err));
+  })
+  .catch(err => console.error("IP fetch error:", err));
+
+});
             }
-        });
-    });
+        
+// Log visit with IP and timestamp to LogSnag
+fetch('https://api.ipify.org?format=json')
+  .then(res => res.json())
+  .then(data => {
+    const ip = data.ip;
+    fetch('https://api.logsnag.com/v1/log', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer YOUR_API_TOKEN',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        project: 'your-project',
+        channel: 'visits',
+        event: 'Page Visit',
+        description: `New visitor from ${ip}`,
+        icon: '👁',
+        notify: false
+      })
+    }).then(() => console.log("Visit logged to LogSnag"))
+      .catch(err => console.error("LogSnag error:", err));
+  })
+  .catch(err => console.error("IP fetch error:", err));
+
+});
+    
+// Log visit with IP and timestamp to LogSnag
+fetch('https://api.ipify.org?format=json')
+  .then(res => res.json())
+  .then(data => {
+    const ip = data.ip;
+    fetch('https://api.logsnag.com/v1/log', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer YOUR_API_TOKEN',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        project: 'your-project',
+        channel: 'visits',
+        event: 'Page Visit',
+        description: `New visitor from ${ip}`,
+        icon: '👁',
+        notify: false
+      })
+    }).then(() => console.log("Visit logged to LogSnag"))
+      .catch(err => console.error("LogSnag error:", err));
+  })
+  .catch(err => console.error("IP fetch error:", err));
+
+});
     
     // Optional: Add header background on scroll
     const header = document.querySelector('header');
@@ -52,7 +177,32 @@ document.addEventListener('DOMContentLoaded', function() {
                 header.style.backgroundColor = 'rgba(10, 25, 47, 0.9)';
                 header.style.boxShadow = 'none';
             }
-        });
+        
+// Log visit with IP and timestamp to LogSnag
+fetch('https://api.ipify.org?format=json')
+  .then(res => res.json())
+  .then(data => {
+    const ip = data.ip;
+    fetch('https://api.logsnag.com/v1/log', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer YOUR_API_TOKEN',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        project: 'your-project',
+        channel: 'visits',
+        event: 'Page Visit',
+        description: `New visitor from ${ip}`,
+        icon: '👁',
+        notify: false
+      })
+    }).then(() => console.log("Visit logged to LogSnag"))
+      .catch(err => console.error("LogSnag error:", err));
+  })
+  .catch(err => console.error("IP fetch error:", err));
+
+});
     }
     
     // Optional: Add animation for elements when they come into view
@@ -72,7 +222,32 @@ document.addEventListener('DOMContentLoaded', function() {
                     entry.target.style.transform = 'translateY(0)';
                     observer.unobserve(entry.target);
                 }
-            });
+            
+// Log visit with IP and timestamp to LogSnag
+fetch('https://api.ipify.org?format=json')
+  .then(res => res.json())
+  .then(data => {
+    const ip = data.ip;
+    fetch('https://api.logsnag.com/v1/log', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer YOUR_API_TOKEN',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        project: 'your-project',
+        channel: 'visits',
+        event: 'Page Visit',
+        description: `New visitor from ${ip}`,
+        icon: '👁',
+        notify: false
+      })
+    }).then(() => console.log("Visit logged to LogSnag"))
+      .catch(err => console.error("LogSnag error:", err));
+  })
+  .catch(err => console.error("IP fetch error:", err));
+
+});
         }, observerOptions);
         
         animateElements.forEach(element => {
@@ -80,6 +255,56 @@ document.addEventListener('DOMContentLoaded', function() {
             element.style.transform = 'translateY(20px)';
             element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             observer.observe(element);
-        });
+        
+// Log visit with IP and timestamp to LogSnag
+fetch('https://api.ipify.org?format=json')
+  .then(res => res.json())
+  .then(data => {
+    const ip = data.ip;
+    fetch('https://api.logsnag.com/v1/log', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer YOUR_API_TOKEN',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        project: 'your-project',
+        channel: 'visits',
+        event: 'Page Visit',
+        description: `New visitor from ${ip}`,
+        icon: '👁',
+        notify: false
+      })
+    }).then(() => console.log("Visit logged to LogSnag"))
+      .catch(err => console.error("LogSnag error:", err));
+  })
+  .catch(err => console.error("IP fetch error:", err));
+
+});
     }
+
+// Log visit with IP and timestamp to LogSnag
+fetch('https://api.ipify.org?format=json')
+  .then(res => res.json())
+  .then(data => {
+    const ip = data.ip;
+    fetch('https://api.logsnag.com/v1/log', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer YOUR_API_TOKEN',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        project: 'your-project',
+        channel: 'visits',
+        event: 'Page Visit',
+        description: `New visitor from ${ip}`,
+        icon: '👁',
+        notify: false
+      })
+    }).then(() => console.log("Visit logged to LogSnag"))
+      .catch(err => console.error("LogSnag error:", err));
+  })
+  .catch(err => console.error("IP fetch error:", err));
+
 });
